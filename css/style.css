@@ -1,0 +1,112 @@
+body{
+    overflow-x:hidden;
+    background-color: #d1d1aa;
+}
+
+/* animations for the elements */
+
+@keyframes hover_anim {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-10px);
+    }
+}
+@keyframes header_load {
+    from{
+        opacity: 0;
+        transform:translateY(-50px);
+    }
+    from{
+        opacity: 1;
+        transform:translateY(0px);
+    }
+}
+@keyframes animation_load {
+    from{
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+    to{
+        opacity:1;
+        transform: translateX(0px);
+    }
+}
+/* custom css query */
+.div-1{
+    max-width:80vw;
+}
+
+
+.nav-link{
+    transition: 1s;
+}
+
+.nav-link:hover{
+    transition: 1s;
+    color: #fff;
+    transform: translateY(-5px);
+}
+.carosel{
+    display: flex;
+    width: 100wh;
+    margin-top:5px;
+}
+.img{
+    object-fit:scale-down;
+}
+.cc{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    transition:2s;
+    /* animation: animation_load 1s; */
+}
+.anim{
+    animation: animation_load 1.5s;
+}
+.product{
+    padding:20px;
+}
+
+
+/* querry for mobile screen only  */
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
+    .carosel{
+        margin-top: 100px;
+        margin-bottom: 80px;
+    }
+  }
+
+
+ /* querry for ipad and tablet screen only  */
+@media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) and (min-device-width: 768px) and (max-device-width: 1017px) {
+    .carosel{
+        display: flex;
+        width: 100wh;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .img{
+        object-fit:scale-down;
+        height: 70vh;
+    }
+}
+  /* querry for laptop screen only */
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {
+    .carosel{
+        display: flex;
+        width: 100wh;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .img{
+        object-fit:scale-down;
+        height: 70vh;
+    }
+}
+
